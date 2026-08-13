@@ -1,0 +1,10 @@
+[package]
+name = "pong"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+godot = "0.5.5"
+
+[lib]
+crate-type = ["cdylib"]

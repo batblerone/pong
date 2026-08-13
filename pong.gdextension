@@ -1,0 +1,14 @@
+[configuration]
+entry_symbol = "gdext_rust_init"
+compatibility_minimum = 4.1
+reloadable = true
+
+[libraries]
+linux.debug.x86_64 =     "res://target/debug/libpong.so"
+linux.release.x86_64 =   "res://target/release/libpong.so"
+windows.debug.x86_64 =   "res://target/debug/pong.dll"
+windows.release.x86_64 = "res://target/release/pong.dll"
+macos.debug =            "res://target/debug/libpong.dylib"
+macos.release =          "res://target/release/libpong.dylib"
+macos.debug.arm64 =      "res://target/debug/libpong.dylib"
+macos.release.arm64 =    "res://target/release/libpong.dylib"
