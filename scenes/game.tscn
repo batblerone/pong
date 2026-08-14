@@ -10,15 +10,26 @@ font_size = 44
 [sub_resource type="LabelSettings" id="LabelSettings_anp1u"]
 font_size = 44
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slkoe"]
+size = Vector2(64, 832)
+
 [node name="Game" type="Node2D" unique_id=186398429]
+
+[node name="GameManager" type="GameManager" parent="." unique_id=820997430]
+p1_label_path = NodePath("../UI/P1Score")
+p2_label_path = NodePath("../UI/P2Score")
 
 [node name="Paddle" parent="." unique_id=475806895 instance=ExtResource("1_uwrxv")]
 position = Vector2(58, 333)
 
 [node name="Paddle2" parent="." unique_id=1996600921 instance=ExtResource("1_uwrxv")]
+paddle_side = "Right"
 position = Vector2(1025, 343)
 
 [node name="Wall" parent="." unique_id=1120549334 instance=ExtResource("2_lnu2h")]
+
+[node name="Wall2" parent="." unique_id=197548863 instance=ExtResource("2_lnu2h")]
+position = Vector2(0, 768)
 
 [node name="Ball" parent="." unique_id=2008427674 instance=ExtResource("3_lbhrr")]
 position = Vector2(544, 333)
@@ -48,3 +59,18 @@ text = "0"
 label_settings = SubResource("LabelSettings_anp1u")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Player2Score" type="Area2D" parent="." unique_id=342998099]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Score" unique_id=440122683]
+position = Vector2(-32, 352)
+shape = SubResource("RectangleShape2D_slkoe")
+
+[node name="Player1Score" type="Area2D" parent="." unique_id=1263525497]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1Score" unique_id=957497137]
+position = Vector2(1120, 352)
+shape = SubResource("RectangleShape2D_slkoe")
+
+[connection signal="body_entered" from="Player2Score" to="GameManager" method="_on_player_2_score"]
+[connection signal="body_entered" from="Player1Score" to="GameManager" method="_on_player_1_score"]
