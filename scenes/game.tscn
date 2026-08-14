@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://djwewioeynbpj"]
+
+[ext_resource type="PackedScene" uid="uid://di2ph1sirks4" path="res://scenes/paddle.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://mncx6o0d7l20" path="res://scenes/wall.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bkgsgplmdrdk4" path="res://scenes/ball.tscn" id="3_lbhrr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_slkoe"]
+font_size = 44
+
+[sub_resource type="LabelSettings" id="LabelSettings_anp1u"]
+font_size = 44
+
+[node name="Game" type="Node2D" unique_id=186398429]
+
+[node name="Paddle" parent="." unique_id=475806895 instance=ExtResource("1_uwrxv")]
+position = Vector2(58, 333)
+
+[node name="Paddle2" parent="." unique_id=1996600921 instance=ExtResource("1_uwrxv")]
+position = Vector2(1025, 343)
+
+[node name="Wall" parent="." unique_id=1120549334 instance=ExtResource("2_lnu2h")]
+
+[node name="Ball" parent="." unique_id=2008427674 instance=ExtResource("3_lbhrr")]
+position = Vector2(544, 333)
+
+[node name="UI" type="Control" parent="." unique_id=1588194772]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="P1Score" type="Label" parent="UI" unique_id=201196525]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 4.0
+offset_right = 130.0
+offset_bottom = 65.0
+text = "0"
+label_settings = SubResource("LabelSettings_slkoe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2Score" type="Label" parent="UI" unique_id=1923679344]
+layout_mode = 0
+offset_left = 979.0
+offset_top = 4.0
+offset_right = 1051.0
+offset_bottom = 65.0
+text = "0"
+label_settings = SubResource("LabelSettings_anp1u")
+horizontal_alignment = 1
+vertical_alignment = 1

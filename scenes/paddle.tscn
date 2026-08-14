@@ -3,13 +3,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_slkoe"]
 size = Vector2(20, 175)
 
-[node name="Player 2" type="CharacterBody2D" unique_id=475806895]
+[node name="Paddle" type="CharacterBody2D" unique_id=475806895]
 metadata/_edit_group_ = true
 
-[node name="Paddle" type="ColorRect" parent="." unique_id=1858317708]
-offset_right = 20.0
-offset_bottom = 175.0
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1675185665]
-position = Vector2(10, 87.5)
 shape = SubResource("RectangleShape2D_slkoe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1782807241]
+offset_left = -10.0
+offset_top = -88.0
+offset_right = 10.0
+offset_bottom = 88.0
