@@ -1,16 +1,18 @@
 [configuration]
 entry_symbol = "gdext_rust_init"
-compatibility_minimum = 4.1
+compatibility_minimum = 4.5
 reloadable = true
 
 [libraries]
-linux.debug.x86_64 =     "res://target/debug/libpong.so"
-linux.release.x86_64 =   "res://target/release/libpong.so"
-windows.debug.x86_64 =   "res://target/debug/pong.dll"
-windows.release.x86_64 = "res://target/release/pong.dll"
-macos.debug =            "res://target/debug/libpong.dylib"
-macos.release =          "res://target/release/libpong.dylib"
-macos.debug.arm64 =      "res://target/debug/libpong.dylib"
-macos.release.arm64 =    "res://target/release/libpong.dylib"
-web.release.threads.wasm32 = "res://target/wasm32-unknown-emscripten/release/pong.threads.wasm"
-web.release.wasm32 = "res://target/wasm32-unknown-emscripten/release/pong.wasm"
+linux.debug.x86_64 =     "res://grust/target/debug/libgrust.so"
+linux.release.x86_64 =   "res://grust/target/release/libgrust.so"
+windows.debug.x86_64 =   "res://grust/target/debug/grust.dll"
+windows.release.x86_64 = "res://grust/target/release/grust.dll"
+macos.debug =            "res://grust/target/debug/libgrust.dylib"
+macos.release =          "res://grust/target/release/libgrust.dylib"
+macos.debug.arm64 =      "res://grust/target/debug/libgrust.dylib"
+macos.release.arm64 =    "res://grust/target/release/libgrust.dylib"
+web.debug.wasm32 = "res://grust/target/wasm32-unknown-emscripten/debug/grust.wasm"
+web.release.wasm32 = "res://grust/target/wasm32-unknown-emscripten/release/grust.wasm"
+web.debug.threads.wasm32 = "res://grust/target/wasm32-unknown-emscripten/debug/grust.threads.wasm"
+web.release.threads.wasm32 = "res://grust/target/wasm32-unknown-emscripten/release/grust.threads.wasm"
